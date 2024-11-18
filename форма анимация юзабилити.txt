@@ -1,0 +1,217 @@
+<div class="form-element">
+[tel* tel-707 placeholder "+7 (___) ___-__-__"]
+<label>Введите ваш телефон</label>
+</div>
+
+
+
+/* Popups */
+.spu-box {
+  padding: 55px 65px 55px;
+}
+
+.spu-content h2 {
+  font-size: 1.438rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.spu-content blockquote {
+  width: 360px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 10px;
+  border: 1px solid #00AA00;
+  border-radius: 14px;
+}
+
+.spu-content blockquote p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.spu-content > p {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #8A8A8A
+}
+
+.spu-content > p a {
+  color: #8A8A8A;
+  text-decoration: underline;
+}
+
+.spu-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.spu-content .spu-acceptance {
+  line-height: 1.7;
+  font-size: 0.75rem;
+}
+
+.spu-content .wpcf7 {
+  position: relative;
+}
+.spu-content .wpcf7-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, -50%);
+}
+
+.spu-content .wpcf7-not-valid-tip {
+  margin-top: 5px;
+  padding-left: 3px;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.spu-content form.invalid .wpcf7-response-output {
+  display: none;
+}
+
+.spu-content .wpcf7-response-output {
+  width: 320px;
+  max-width: 100%;
+  margin: 15px auto !important;
+  padding: 10px 15px !important;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.spu-box .spu-close-top_right {
+  font-size: 50px !important;
+  right: 30px;
+  top: 30px;
+  font-weight: 300;
+}
+
+
+
+/* Form elements */
+.form-element {
+  position: relative;
+  width: 320px;
+  max-width: 100%;
+  margin: 10px auto 0;
+}
+
+.form-element input {
+  display: block;
+  width: 320px !important;
+  max-width: 100%;
+  padding: 41.5px 20px 18.5px !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  font-size: 1rem !important;
+  font-weight: 500;
+  background-color: #F4F4F4;
+  outline: none;
+}
+
+.form-element label {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  width: calc(100% - 40px) !important;
+  pointer-events: none;
+}
+
+.form-element input.wpcf7-validates-as-required + label::after {
+  content: "*";
+  position: absolute;
+  top: 2px;
+  right: 0;
+  color: red;
+  z-index: 2;
+}
+
+.form-element label span {
+  display: inline-block;
+  min-width: 5px;
+  font-size: 1rem;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), font-size 0.3s;
+}
+
+.form-element input:not(:focus)::placeholder {
+  color: transparent;
+}
+
+.form-element input:focus,
+.form-element input:valid {
+  border-bottom-color: lightblue;
+}
+
+.form-element input:focus + label span,
+.form-element input:valid + label span,
+.form-element input[aria-invalid='true'] + label span {
+  font-size: 0.75rem;
+  color: #8A8A8A;
+  transform: translateY(-15px);
+}
+
+.spu-content input[type="submit"] {
+  display: block;
+  width: 320px;
+  max-width: 100%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 33.5px 79px 33.5px 79px;
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-image: linear-gradient(78.06deg, #258229 0%, #39BB3B 50%, #39BB3B 100%);
+  background-size: 640px 80px;
+  background-position: 0px;
+  box-shadow: 0px 4px 0px #029528, inset 0px 0px 30px rgba(255, 255, 255, 0.25);
+  transition: background 0.6s ease-out;
+}
+.spu-content input[type="submit"]:hover {
+  background-position: -320px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Input label animation
+window.addEventListener('DOMContentLoaded', function() {
+  const labels = document.querySelectorAll('.form-element label');
+  
+  labels.forEach(label => {
+    const labelHTML = label.innerText
+      .split('')
+      .map((letter, index) => `<span style="transition-delay: ${index * 10}ms">${letter}</span>`)
+      .join('');
+
+    label.previousElementSibling.insertAdjacentHTML('beforeend', '<label>' + labelHTML + '</label>');
+    label.remove();
+
+  });
+});
+
+
+
+// Add input mask to phones
+jQuery(function($){
+  $("input[type='tel']").mask("+7 (999) 999-99-99");
+});

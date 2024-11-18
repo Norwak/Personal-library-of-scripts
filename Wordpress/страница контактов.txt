@@ -1,0 +1,136 @@
+<?php
+// ====================
+  // ADD CONTACTS PAGE
+  // ====================
+  add_action('admin_menu', function(){
+  	add_menu_page('Контакты на сайте', 'Контакты на сайте', 'manage_options', 'site-contacts', 'site_contacts_setting');
+  } );
+
+  // функция отвечает за вывод страницы настроек
+  // подробнее смотрите API Настроек: http://wp-kama.ru/id_3773/api-optsiy-nastroek.html
+  function site_contacts_setting(){
+  	?>
+  	<div class="wrap">
+  		<h2><?php echo get_admin_page_title() ?></h2>
+
+  		<form action="options.php" method="POST">
+  			<?php
+  				settings_fields("contacts_group");     // скрытые защитные поля
+  				do_settings_sections("contacts_page"); // секции с настройками (опциями).
+  				submit_button();
+  			?>
+  		</form>
+  	</div>
+  	<?php
+
+  }
+
+  /**
+   * Регистрируем настройки.
+   * Настройки будут храниться в массиве, а не одна настройка = одна опция.
+  */
+  add_action('admin_init', 'plugin_settings');
+  function plugin_settings(){
+
+    // параметры: $option_group, $option_name, $sanitize_callback
+    register_setting('contacts_group', 'phone1');
+    register_setting('contacts_group', 'phone2');
+    register_setting('contacts_group', 'phone3');
+    register_setting('contacts_group', 'address');
+
+    register_setting('contacts_group', 'vk');
+    register_setting('contacts_group', 'fb');
+    register_setting('contacts_group', 'inst');
+    register_setting('contacts_group', 'ok');
+    register_setting('contacts_group', 'whats');
+
+    // параметры: $id, $title, $callback, $page
+    add_settings_section( 'contacts', 'Контакты', '', 'contacts_page' );
+    add_settings_section( 'social-links', 'Социальные сети', '', 'contacts_page' );
+
+    // параметры: $id, $title, $callback, $page, $section, $args
+    add_settings_field('phone1', 'Телефон', 'output_phone1', 'contacts_page', 'contacts' );
+    add_settings_field('phone2', 'Телефон рем.зона', 'output_phone2', 'contacts_page', 'contacts' );
+    add_settings_field('phone3', 'Телефон отдел запчастей', 'output_phone3', 'contacts_page', 'contacts' );
+    add_settings_field('address', 'Адрес', 'output_address', 'contacts_page', 'contacts' );
+
+    add_settings_field('vk', 'ВКонтакте', 'output_vk', 'contacts_page', 'social-links' );
+    add_settings_field('fb', 'Facebook', 'output_fb', 'contacts_page', 'social-links' );
+    add_settings_field('inst', 'Instagram', 'output_inst', 'contacts_page', 'social-links' );
+    add_settings_field('ok', 'Одноклассники', 'output_ok', 'contacts_page', 'social-links' );
+    add_settings_field('whats', 'Ватсапп', 'output_whats', 'contacts_page', 'social-links' );
+  }
+
+  ## Заполняем опцию Телефон
+  function output_phone1(){
+    $val = get_option('phone1');
+    ?>
+    <style>input[type=text] { width: 100%; }</style>
+    <input type="text" name="phone1" value="<?php echo esc_attr( $val ) ?>" />
+    <?php
+  }
+  ## Заполняем опцию Телефон рем.зона
+  function output_phone2(){
+    $val = get_option('phone2');
+    ?>
+    <style>input[type=text] { width: 100%; }</style>
+    <input type="text" name="phone2" value="<?php echo esc_attr( $val ) ?>" />
+    <?php
+  }
+  ## Заполняем опцию Телефон отдел запчастей
+  function output_phone3(){
+    $val = get_option('phone3');
+    ?>
+    <style>input[type=text] { width: 100%; }</style>
+    <input type="text" name="phone3" value="<?php echo esc_attr( $val ) ?>" />
+    <?php
+  }
+  ## Заполняем опцию Почту
+  function output_email(){
+    $val = get_option('email');
+    ?>
+    <input type="text" name="email" value="<?php echo esc_attr( $val ) ?>" />
+    <?php
+  }
+  ## Заполняем опцию Адрес
+  function output_address(){
+    $val = get_option('address');
+    ?>
+    <input type="text" name="address" value="<?php echo esc_attr( $val ) ?>" />
+    <?php
+  }
+  ## Заполняем опцию ВК
+  function output_vk(){
+    $val = get_option('vk');
+    ?>
+    <input type="text" name="vk" value="<?php echo esc_attr( $val ) ?>" />
+    <?php
+  }
+  ## Заполняем опцию Facebook
+  function output_fb(){
+    $val = get_option('fb');
+    ?>
+    <input type="text" name="fb" value="<?php echo esc_attr( $val ) ?>" />
+    <?php
+  }
+  ## Заполняем опцию Instagram
+  function output_inst(){
+    $val = get_option('inst');
+    ?>
+    <input type="text" name="inst" value="<?php echo esc_attr( $val ) ?>" />
+    <?php
+  }
+  ## Заполняем опцию Одноклассники
+  function output_ok(){
+    $val = get_option('ok');
+    ?>
+    <input type="text" name="ok" value="<?php echo esc_attr( $val ) ?>" />
+    <?php
+  }
+  ## Заполняем опцию Вастапп
+  function output_whats(){
+    $val = get_option('whats');
+    ?>
+    <input type="text" name="whats" value="<?php echo esc_attr( $val ) ?>" />
+    <?php
+  }

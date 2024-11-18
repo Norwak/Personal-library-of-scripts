@@ -1,0 +1,2 @@
+// https://stackoverflow.com/a/58550111
+const isNumeric = (num) => (typeof(num) === 'number' || typeof(num) === "string" && num.trim() !== '') && !isNaN(num);

@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} (Applebot|thesis-research-bot|fidget-spinner-bot|keys-so-bot|Amazonbot|GeedoBot|Bytespider|PolecatBot|msnbot|Applebot|Scrappy|FeedBurner|DuckDuckBot|SeopultContentAnalyzer|SeekportBot|DataForSeoBot|Barkrowler|BLEXBot|SemrushBot|MJ12bot|AhrefsBot|bingbot|DotBot|PetalBot|LinkpadBot|SputnikBot|statdom.ru|MegaIndex.ru|WebDataStats|Jooblebot|Baiduspider|BackupLand|NetcraftSurveyAgent|openstat.ru) [NC]
+RewriteRule .* - [F,L]
+
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} ^.*(SeopultContentAnalyzer|SeekportBot|DataForSeoBot|Barkrowler|BLEXBot|SemrushBot|AhrefsBot|bingbot|DotBot|PetalBot|LinkpadBot|SputnikBot|statdom.ru|MegaIndex.ru|WebDataStats|Jooblebot|Baiduspider|BackupLand|NetcraftSurveyAgent|openstat.ru|serpstatbot|Serendeputy|datenbank.de|CCBot|ZoominfoBot|linkfluence|weborama|seokicks.de|amazonbot|GPTBot).*$ [NC]
+RewriteRule .* - [F,L]

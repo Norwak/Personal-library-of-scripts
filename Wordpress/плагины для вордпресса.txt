@@ -1,0 +1,36 @@
+Ќ≈ќЅ’ќƒ»ћќ—“№:
+Cyr-To-Lat - конвертировать в ссылках русские буквы на латинницу
+Classic Editor - потому что Gutenburg фигн€
+Yoast SEO - —≈ќшный плагин
+
+
+ѕќ Ќ≈ќЅ’ќƒ»ћќ—“»:
+Elementor - быстрое создание верстки
+HT Slider For Elementor - слайдер более быстрый, но менее разнообразный
+Premium Addons for Elementor - есть элемент слайдера, пользователь может мен€ть через шаблоны. „асто ломает сайт
+Contact Form 7 - почтовые формы
+Void Contact Form 7 Widget For Elementor Page Builder - интеграци€ Contact Form 7 в Elementor
+Woocommerce - быстрый магазин
+Advanced Custom Fields - кастомные пол€ в запис€х
+Custom Post Type UI - создавать новые разновидности записей
+FooGallery - красива€, а самое главое удобна€ ajax-галере€
+Insert PHP Code Snippet - шорткоды, PHP сниппеты
+TinyMCE Advanced - добавл€ет фичи в редакторы Wordpress'а, которые и так там должны быть
+POPUPS - всегда работающие, простые всплывающие окна
+Disable All WordPress Updates - отрубить все обновлени€, чтобы клиенты не ломали сайты. ƒобавл€ть, когда сайт уже готов. ѕроблемы с локализацией у других плагинов.
+Allow HTML in Category Descriptions - не удал€ть HTML теги в описани€х категорий
+Post Types Order - если нужно мен€ть пор€док постов или страниц
+Easy FancyBox - дл€ легких галерей
+
+
+Ѕ≈«ќѕј—Ќќ—“№:
+WPS Hide Login - смена URL wp-admin и wp_login.php
+Advanced noCaptcha & invisible Captcha - каптча на вход
+
+
+”ƒќЅ—“¬ќ ѕќЋ№«ќ¬ј“≈Ћё:
+Disable Comments - удалить всю ненужную функциональность комментировани€
+Adminimize - позвол€ет убрать ненужные пункты меню из админки
+
+‘»Ў≈„ » –ёЎ≈„ »:
+Page scroll to id - красива€ прокрутка страницы

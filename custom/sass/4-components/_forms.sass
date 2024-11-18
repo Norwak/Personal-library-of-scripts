@@ -1,0 +1,49 @@
+/* // */
+// Styles for form elements and specific forms
+/* // */
+
+@use '../2-abstracts/_variables' as *
+
+input
+  width: 300px
+  height: 44px
+  padding: 0 10px 0 45px
+  border: 1px solid #E4E4E4
+  border-radius: 15px
+  font-size: 1.4rem
+  font-weight: 400
+
+input[type="checkbox"], input[type="radio"]
+  vertical-align: middle
+  width: 24px
+  height: 24px
+  border-radius: 4px
+
+
+  
+form
+  position: relative
+
+.wpcf7-not-valid-tip
+  font-size: 1.2rem
+  padding-left: 12px
+  padding-right: 12px
+
+.wpcf7-spinner
+  position: absolute
+  margin: 0
+  padding: 0
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.wpcf7-not-valid
+  border-color: red
+
+.wpcf7-form-control-wrap
+  display: block
+
+.wpcf7-response-output
+  margin: 10px 0 0 !important
+  padding: 10px !important
+  font-size: 1.6rem !important

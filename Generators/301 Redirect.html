@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Создатель 301-ых редиректов</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      margin: 0.25rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      height: 500px;
+      margin: 0;
+      padding: 5px;
+      resize: none;
+    }
+
+    button {
+      display: block;
+      width: 200px;
+      height: 30px;
+      margin: 1rem auto;
+    }
+
+    .output {
+      display: block;
+      max-width: 100%;
+      width: 900px;
+      height: 500px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Создатель 301-ых редиректов</h1>
+  <div class="split">
+    <div class="input_from-wrapper">
+      <div>
+        <p>Откуда:</p>
+        <textarea id="from"></textarea>
+      </div>
+    </div>
+    <div class="input_to-wrapper">
+      <div>
+        <p>Куда:</p>
+        <textarea id="to"></textarea>
+      </div>
+    </div>
+  </div>
+  <button id="convert_btn">Конвертировать</button>
+  <div class="output">
+    <p>Вывод:</p>
+    <textarea id="output"></textarea>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $("#convert_btn").click(function() {
+      // Initialize variables
+      let input_from = $('#from');
+      let input_to = $('#to');
+      let output = $('#output');
+      let output_text = '';
+
+      // Split input textareas into arrays
+      input_from = input_from.val().split('\n');
+      input_to = input_to.val().split('\n');
+
+      // Remove empty lines
+      input_from = input_from.filter(Boolean);
+      input_to = input_to.filter(Boolean);
+
+      $.each(input_from, function(index, value) {
+        output_text += 'Redirect 301 ' + input_from[index] + ' ' + input_to[index] + '\n';
+      });
+
+      output.val(output_text);
+    });
+  </script>
+</body>
+</html>

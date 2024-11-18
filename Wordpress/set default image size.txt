@@ -1,0 +1,4 @@
+add_filter( 'pre_option_image_default_size', 'my_default_image_size' );
+function my_default_image_size () {
+	return 'large'; 
+}

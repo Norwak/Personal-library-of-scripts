@@ -1,0 +1,11 @@
+<?php
+$contentElementor = "";
+
+if (class_exists("\\Elementor\\Plugin")) {
+    $post_ID = 890;
+    $pluginElementor = \Elementor\Plugin::instance();
+    $contentElementor = $pluginElementor->frontend->get_builder_content($post_ID);
+}
+
+echo $contentElementor;
+?>

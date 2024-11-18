@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><yml_catalog date="2024-10-02 10:12+0000">
+ <shop>
+  <name>Фильтр ФОВ 1,0-0,6</name>
+  <company>Название компании</company>
+  <url>https://vse-filtri.ru</url>
+  <currencies>
+   <currency id="RUR" rate="1"></currency>
+  </currencies>     <delivery>false</delivery>     <pickup>false</pickup>   <categories>     <category id="52" >Ионитные фильтры ФИПа, ФИПр, ФИСДВр, ФИСДНр</category>     <category id="12" >Осветлительные фильтры ФОВ и ФОГ</category>     <category id="53" parentId="52">Фильтры ФИПа</category>     <category id="54" parentId="52">Фильтры ФИПр</category>     <category id="55" parentId="52">Фильтры ФИСДВр</category>     <category id="56" parentId="52">Фильтры ФИСДНр</category>     <category id="50" parentId="12">Фильтры ФОВ</category>     <category id="51" parentId="12">Фильтры ФОГ</category>     <category id="57" >Фильтры ФСУ</category>   </categories>
+  <offers>        <offer id="4230" available="true">
+        <url>https://vse-filtri.ru/filtr-fsu-34-06/</url>
+        <price>2684000</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>57</categoryId>
+        <name>Фильтр ФСУ 3,4-0,6</name>
+        <picture>https://vse-filtri.ru/wp-content/uploads/2024/09/filtr-fsu-34-06.jpg</picture>
+        <description>Тест описание
+Вторая строка</description>
+        <vendor>Все фильтры</vendor>                       </offer>   </offers>
+ </shop>
+</yml_catalog>

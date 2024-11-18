@@ -1,0 +1,50 @@
+Бэк
+/wedadmin/calculator.php файл текущего калькулятора, берёт карусель за основу
+/wedadmin/carusel.php для референса
+/wedadmin/lib/class.Carusel.php тут важно смотреть внутренность таблицы
+/wedadmin/lib/class.BaseCarusel.php тут важно смотреть внешнюю часть таблицы
+
+
+Фронт
+/lib/class.Site.php содержить весь html сайта. Всё захардкожено
+
+Скачать Google API без композера https://github.com/googleapis/google-api-php-client
+(инструкции пониже)
+
+Инструкция как коннектиться к листу https://www.nidup.io/blog/manipulate-google-sheets-in-php-with-api
+
+
+✔️ Обновить версию PHP.
+
+✔️ Сделать лист в Google Sheets.
+
+✔️ Установить Google Sheets API на хостинг.
+
+✔️ Доработать таблицу калькулятора:
+Пусто     Цена за тонну  Цена за м3  м3 в тонне  тонн в м3
+Название
+Название
+Название
+
+✔️ Сделать новую таблицу:
+Пусто  Цена до 10м3  Цена от 11м3 до 20м3  Цена от 21м3 (автоформула)
+Город
+Город
+Город
+
+✔️ Сделать такие же таблицы в админке.
+
+На фронте через ajax спрашивать значения из таблиц.
+
+Через шорткоды сделать динамические таблицы цен в продукции и доставке.
+
+
+
+
+https://stackoverflow.com/questions/69873458/google-drive-api-notifications-file-watch-not-sending-add-notifications-poss
+https://developers.google.com/drive/api/guides/push?hl=en
+https://stackoverflow.com/questions/63140482/google-drive-push-notifications-stops-working-in-a-hour
+https://developers.google.com/drive/api/reference/rest/v3/files/get?hl=en
+https://stackoverflow.com/questions/67775503/get-file-content-of-google-docs-using-google-drive-api-v3-php-in-a-variable
+https://stackoverflow.com/questions/47474038/how-to-get-the-file-modification-dates-with-google-drive
+

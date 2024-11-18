@@ -1,0 +1,9 @@
+function remove_cpt_pages() {
+  remove_menu_page( 'edit.php?post_type=your_post_type' );
+  remove_submenu_page('cptui_main_menu', 'cptui_tools'); // Tools
+  remove_submenu_page('cptui_main_menu', 'cptui_support'); // Help/Support
+  remove_submenu_page('cptui_main_menu', 'cptui_main_menu'); // About CPT UI
+  // echo '<pre>' . print_r($GLOBALS[ 'menu' ], TRUE) . '</pre>';
+  echo '<pre>' . print_r($GLOBALS['submenu'], TRUE) . '</pre>';
+}
+add_action( 'admin_init', 'remove_cpt_pages', 9999 );

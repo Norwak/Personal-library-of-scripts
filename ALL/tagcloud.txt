@@ -1,0 +1,51 @@
+<style>
+  .tagcloud {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+  }
+  .tag-btn {
+      width: auto;
+      display: block;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 12px;
+      font-size: 12px;
+      transition: all 0.2s;
+      background: #2d4664;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      margin: 2px 5px;
+  }
+  .tag-btn:hover {
+    background: #dc1a5b;
+  }
+  .tag-btn a {
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+  }
+</style>
+
+<div class="tagcloud">
+	<div class="tag-btn"><a href="/blog/konditsionery-invertornogo-tipa-v-yekaterinburge/">Кондиционеры инверторного типа</a></div>
+	<div class="tag-btn"><a href="/blog/split-sistema-na-2-komnaty-v-yekaterinburge/">Сплит система на две комнаты</a></div>
+	<div class="tag-btn"><a href="/blog/split-sistemy-na-3-komnaty-v-yekaterinburge/">Сплит система на три комнаты</a></div>
+	<div class="tag-btn"><a href="/blog/chistka-vnutrennego-bloka-split-sistemy/">Чистка внутреннего блока сплит системы</a></div>
+	<div class="tag-btn"><a href="/blog/multi-split-sistemy-daikin-v-yekaterinburge/">Мульти сплит системы Daikin</a></div>
+	<div class="tag-btn"><a href="/blog/multi-split-sistemy-energolux/">Мульти сплит системы Energolux</a></div>
+	<div class="tag-btn"><a href="/blog/kanalnye-konditsionery-tosot/">Канальные кондиционеры Tosot</a></div>
+	<div class="tag-btn"><a href="/blog/kassetnye-konditsionery-ballu/">Кассетные кондиционеры Ballu</a></div>
+	<div class="tag-btn"><a href="/blog/kanalnye-konditsionery-quattroclima/">Канальные кондиционеры Quattroclima</a></div>
+	<div class="tag-btn"><a href="/blog/standartnyy-i-nestandartnyy-montazh-konditsionera/">Стандартный и нестандартный монтаж кондиционера</a></div>
+	<div class="tag-btn"><a href="/blog/luchshie-konditsionery-dlya-doma/">Лучшие кондиционеры для дома</a></div>
+	<div class="tag-btn"><a href="/blog/nedorogie-invertornye-konditsionery/">Недорогие инверторные кондиционеры</a></div>
+	<div class="tag-btn"><a href="/blog/perenos-naruzhnogo-bloka-konditsionera/">Перенос наружного блока кондиционера</a></div>
+	<div class="tag-btn"><a href="/blog/remont-naruzhnogo-bloka-konditsionera/">Ремонт наружного блока кондиционера</a></div>
+	<div class="tag-btn"><a href="/blog/ustanovka-invertornogo-konditsionera/">Установка инверторного кондиционера</a></div>
+	<div class="tag-btn"><a href="/blog/luchshie-konditsionery/">Лучшие кондиционеры</a></div>
+</div>

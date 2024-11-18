@@ -1,0 +1,62 @@
+<div class="whatsapp-callback" id="whatsapp-callback">
+  <a href="https://wa.me/79193626600/" target="_blank" class="whatsapp-callback__link">
+    <img src="/wa-data/public/shop/themes/topshop/img/whatsapp.png">
+  </a>
+  <div class="whatsapp-callback__tooltip">Написать в Whatsapp</div>
+</div>
+
+
+
+.whatsapp-callback
+  position: fixed
+  bottom: 80px
+  right: 50px
+  width: 65px
+  height: 65px
+  transform: scale(1)
+  transition: transform 0.3s
+  z-index: 100
+  &__link
+    display: block
+  img
+    width: 100%
+    height: 100%
+    object-fit: contain
+    object-position: center center
+  &__tooltip
+    visibility: hidden
+    position: absolute
+    width: 175px
+    background-color: #555
+    color: #fff
+    text-align: center
+    padding: 5px 0
+    border-radius: 6px
+    z-index: 1
+    opacity: 0
+    transition: opacity .6s
+    top: 15px
+    bottom: auto
+    right: 120%
+    font-size: 15px
+    &::after
+      content: ""
+      position: absolute
+      top: 50%
+      left: 100%
+      margin-top: -5px
+      border-width: 5px
+      border-style: solid
+      border-color: transparent transparent transparent #555
+  &:hover
+    transform: scale(1.1)
+    .whatsapp-callback__tooltip
+      visibility: visible
+      opacity: 1
+
+@media (max-width: 518px)
+  .whatsapp-callback
+    bottom: 70px
+    right: 20px
+    width: 55px
+    height: 55px

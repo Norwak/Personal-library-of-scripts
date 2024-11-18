@@ -1,0 +1,13 @@
+    .header-content-bottom_menu ul li a:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0; /* must */
+      right: 0; /* must */
+      width: 0;
+      height: 3px;
+      margin: auto; /* must */
+      background-color: #ffeb36;
+      transition: width 0.3s;
+    }

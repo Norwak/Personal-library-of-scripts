@@ -1,0 +1,4 @@
+  <script>
+    let content = document.getElementById('content');
+    content.style.height = content.clientHeight + 'px';
+  </script>

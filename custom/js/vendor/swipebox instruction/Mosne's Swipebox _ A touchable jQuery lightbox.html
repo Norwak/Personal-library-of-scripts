@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://www.mosne.it/playground/swipebox/#download -->
+<html lang="en-US" class="csstransforms csstransforms3d csstransitions"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A touchable jQuery lightbox plugin for desktop, mobile and tablet">
+	<meta property="og:site_name" content="Swipebox">
+	<meta property="og:url" content="http://brutaldesign.github.com/swipebox/">
+	<meta property="og:image" content="http://swipebox.brutaldesign.com/meta/swipe250.jpg">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Swipebox | A touchable jQuery lightbox">
+	<meta property="og:description" content="Swipebox is a jQuery lightbox plugin for desktop, mobile and tablet">
+	<meta itemprop="name" content="Swipebox | A touchable jQuery lightbox">
+	<meta itemprop="image" content="http://swipebox.brutaldesign.com/meta/swipe250.jpg">
+	<meta itemprop="description" content="Swipebox is a jQuery lightbox plugin for desktop, mobile and tablet">
+
+	<link rel="stylesheet" href="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/style.css">
+	<link rel="stylesheet" href="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/swipebox.css">
+	<title>Mosne's Swipebox | A touchable jQuery lightbox</title>
+	<!-- share buttons -->
+	<script src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/all.js.Без названия" async="" crossorigin="anonymous"></script><script src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/all.js(1).Без названия" id="facebook-jssdk"></script><script src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/widgets.js.Без названия" id="twitter-wjs"></script><script type="text/javascript">(function(doc, script) {
+		var js,
+		fjs = doc.getElementsByTagName(script)[0],
+		add = function(url, id) {
+		if (doc.getElementById(id)) {return;}
+		js = doc.createElement(script);
+		js.src = url;
+		id && (js.id = id);
+		fjs.parentNode.insertBefore(js, fjs);
+		};add("//connect.facebook.net/en_US/all.js#xfbml=1", "facebook-jssdk");
+		add("//platform.twitter.com/widgets.js", "twitter-wjs");
+		}(document, "script"));
+	</script>
+	<!-- end share buttons -->
+<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
+<body style="">
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+	<a href="https://github.com/mosne/swipebox" id="fork-this"></a>
+	<div id="main">
+		<div class="wrap">
+
+			<header>
+				<h1>Mosne's Swipebox.</h1>
+				<p class="tagline">A touchable jQuery lightbox <br>
+    				a fork from  <a href="https://github.com/brutaldesign/swipebox">brutaldesign</a>.
+				</p>
+
+
+
+				<ul class="index-table">
+					<li><a href="https://www.mosne.it/playground/swipebox/#what">What is Swipebox ?</a>
+						<ul>
+							<li><a href="https://www.mosne.it/playground/swipebox/#features">Main Features</a></li>
+							<li><a href="https://www.mosne.it/playground/swipebox/#compatibility">Compatibility</a></li>
+						</ul>
+					</li>
+					<li><a href="https://www.mosne.it/playground/swipebox/#try">Try it</a></li>
+					<li><a href="https://www.mosne.it/playground/swipebox/#basic">Basic Usage</a></li>
+					<li><a href="https://www.mosne.it/playground/swipebox/#advanced">Advanced</a>
+						<ul>
+							<li><a href="https://www.mosne.it/playground/swipebox/#rel">Use Rel Attribute</a></li>
+							<li><a href="https://www.mosne.it/playground/swipebox/#video">Youtube support</a></li>
+							<li><a href="https://www.mosne.it/playground/swipebox/#dynamic">Load slides dynamically</a></li>
+							<li><a href="https://www.mosne.it/playground/swipebox/#refresh">Refresh Method</a></li>
+							<li><a href="https://www.mosne.it/playground/swipebox/#open">Check open state</a></li>
+							<li><a href="https://www.mosne.it/playground/swipebox/#options">Options</a></li>
+						</ul>
+					</li>
+					<li><a href="https://www.mosne.it/playground/swipebox/#download">Download</a></li>
+
+				</ul>
+			</header>
+			<hr>
+			<section id="presentation">
+				<div id="what"></div>
+				<h2>What is Swipebox ?</h2>
+				<p>Swipebox is a jQuery "lightbox" plugin for desktop, mobile and tablet.</p>
+
+				<div id="features"></div>
+				<h3>Main Features</h3>
+				<ol>
+					<li>Swipe gestures for mobile</li>
+					<li>Keyboard Navigation for desktop</li>
+					<li>CSS transitions with jQuery fallback</li>
+					<li>Retina support for UI icons</li>
+					<li>Easy CSS customization</li>
+				</ol>
+
+				<div id="compatibility"></div>
+				<h3>Compatibility</h3>
+				<p>Chrome, Safari, Firefox, Opera, IE8+, IOS4+, Android, windows phone.</p>
+
+			</section>
+			<hr>
+			<section id="exemple" class="clearfix">
+				<div id="try"></div>
+				<h2>Try it</h2>
+				<div class="box">
+					<a href="http://swipebox.brutaldesign.com/assets/full/nuke.jpg" class="swipebox" title="Nuke">
+						<img src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/nuke_thumb.jpg" alt="nuke">
+					</a>
+				</div>
+				<div class="box">
+					<a href="http://swipebox.brutaldesign.com/assets/full/leap.jpg" class="swipebox" title="Leap">
+						<img src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/leap_thumb.jpg" alt="leap">
+					</a>
+				</div>
+				<div class="box">
+					<a href="http://swipebox.brutaldesign.com/assets/full/reine.jpg" class="swipebox" title="Reine">
+						<img src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/reine_thumb.jpg" alt="reine">
+					</a>
+				</div>
+				<div class="box">
+					<a href="http://swipebox.brutaldesign.com/assets/full/neptune.jpg" class="swipebox" title="Neptune">
+						<img src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/neptune_thumb.jpg" alt="neptune">
+					</a>
+				</div>
+			</section>
+			<hr>
+			<section id="usage">
+				<div id="basic"></div>
+				<h2>Basic Usage</h2>
+				<h3>Javascript</h3>
+
+				<p>Include jquery and the swipebox script in your <code>head</code> tags or right before your <code>body</code> closing tag.</p>
+<pre>&lt;script src="lib/jquery-2.0.3.js"&gt;&lt;/script&gt;
+&lt;script src="source/jquery.swipebox.js"&gt;&lt;/script&gt;</pre>
+				<h3>CSS</h3>
+				<p>Include the swipebox CSS style in your <code>head</code> tags.</p>
+<pre>&lt;link rel="stylesheet" href="source/swipebox.css"&gt;</pre>
+				<h3>HTML</h3>
+				<p>Use a specific class for your links and use the title attribute as caption.</p>
+<pre>&lt;a href="big/image.jpg" class="swipebox" title="My Caption"&gt;
+	&lt;img src="small/image.jpg" alt="image"&gt;
+&lt;/a&gt;</pre>
+				<h3>Fire the plugin</h3>
+				<p>Bind the swipebox behaviour on every link with the "swipebox" class.</p>
+<pre>&lt;script type="text/javascript"&gt;
+jQuery(function($) {
+	$(".swipebox").swipebox();
+});
+&lt;/script&gt;
+</pre>
+			</section>
+			<hr>
+			<section id="advanced-usage">
+				<div id="advanced"></div>
+				<h2>Advanced</h2>
+
+				<div id="rel"></div>
+				<h3>Use "rel" Attribute</h3>
+				<p>You can add a <code>rel</code> attribute to your links to seperate galleries.</p>
+<pre><span>&lt;!-- Gallery 1 --&gt;</span>
+&lt;a rel="gallery-1" href="big/image1.jpg" class="swipebox"&gt;
+	&lt;img src="small/image1.jpg" alt="image"&gt;
+&lt;/a&gt;
+&lt;a rel="gallery-1" href="big/image2.jpg" class="swipebox"&gt;
+	&lt;img src="small/image2.jpg" alt="image"&gt;
+&lt;/a&gt;
+<span>&lt;!-- Gallery 2 --&gt;</span>
+&lt;a rel="gallery-2" href="big/image3.jpg" class="swipebox"&gt;
+	&lt;img src="small/image3.jpg" alt="image"&gt;
+&lt;/a&gt;
+&lt;a rel="gallery-2" href="big/image4.jpg" class="swipebox"&gt;
+	&lt;img src="small/image4.jpg" alt="image"&gt;
+&lt;/a&gt;</pre>
+
+				<div id="video"></div>
+				<h3>Video support</h3>
+				<p>Simply paste a youtube video URL in your href attribute. The script will automatically check if it's a Youtube URL and open the video in the swipebox.</p>
+				<p>
+					<a class="swipebox-video" rel="video-1" href="http://www.youtube.com/watch?v=XSGBVzeBUbk">YouTube demo</a>
+				</p>
+				<p>
+    				<a class="swipebox-video" rel="video-2" href="http://vimeo.com/57182041">Vimeo demo</a>
+				</p>
+				<p>
+    				<a class="swipebox-video" rel="video-3" href="http://www.dailymotion.com/video/xflzlf_doctor-who-theme-principal-1982_shortfilms">Dailymotion demo</a>
+				</p>
+				<pre>&lt;a class="swipebox-video" rel="youtube" href="http://www.youtube.com/watch?v=XSGBVzeBUbk"&gt;My Videos&lt;/a&gt;</pre>
+
+				<div id="dynamic"></div>
+				<h3>Load slides dynamically</h3>
+				<p>You can set your gallery dynamically by passing an array object to the swipebox.</p>
+				<p><a id="gallery" href="https://www.mosne.it/playground/swipebox/#">View gallery</a></p>
+
+<pre>$("#gallery").click(function(e){
+	e.preventDefault();
+	$.swipebox([
+		{href:'big/image1.jpg', title:'My Caption'},
+		{href:'big/image2.jpg', title:'My Second Caption'}
+	]);
+});
+</pre>
+			<div id="refresh"></div>
+			<h3>Refresh Method</h3>
+			<p>The refresh method allows you to reload the slides if the DOM has changed.</p>
+
+			<pre>var swipeboxInstance = $(".a:visible").swipebox();
+
+// Use the refresh method after your event is completed
+swipeboxInstance.refresh();</pre>
+
+			<p>For exemple, if you use <a href="http://isotope.metafizzy.co/demos/filtering.html" target="_blank">isotope</a> filter.</p>
+
+			<ul id="filter">
+				<li><a href="https://www.mosne.it/playground/swipebox/#" data-filter="item">All</a></li>
+				<li><a href="https://www.mosne.it/playground/swipebox/#" data-filter="sea">Sea</a></li>
+				<li><a href="https://www.mosne.it/playground/swipebox/#" data-filter="beach">Beach</a></li>
+			</ul>
+			<div id="grid" class="clearfix">
+				<div class="box item beach">
+					<a href="http://swipebox.brutaldesign.com/assets/full/nuke.jpg" class="swipebox-isotope" title="Nuke">
+						<img src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/nuke_thumb.jpg" alt="nuke">
+					</a>
+				</div>
+				<div class="box item sea">
+					<a href="http://swipebox.brutaldesign.com/assets/full/leap.jpg" class="swipebox-isotope" title="Leap">
+						<img src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/leap_thumb.jpg" alt="leap">
+					</a>
+				</div>
+				<div class="box item beach">
+					<a href="http://swipebox.brutaldesign.com/assets/full/reine.jpg" class="swipebox-isotope" title="Reine">
+						<img src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/reine_thumb.jpg" alt="reine">
+					</a>
+				</div>
+				<div class="box item sea">
+					<a href="http://swipebox.brutaldesign.com/assets/full/neptune.jpg" class="swipebox-isotope" title="Neptune">
+						<img src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/neptune_thumb.jpg" alt="neptune">
+					</a>
+				</div>
+			</div>
+
+<pre><span>// Use the swipebox only for  visible elements</span>
+var swipeboxInstance = $(".swipebox-isotope:not(.isotope-hidden .swipebox-isotope)").swipebox();
+
+<span>// Callback function that fire the refresh method, once the animation is finished</span>
+onAnimationCompleted = function(){
+	swipeboxInstance.refresh();
+};
+
+// Isotope stuff
+optionFilterLinks = $('#filter').find('a');
+optionFilterLinks.attr('href', '#');
+
+optionFilterLinks.click( function(){
+	var selector = $(this).attr('data-filter');
+	$('#grid').isotope({
+		filter : '.' + selector,
+		itemSelector : '.item',
+		layoutMode : 'fitRows',
+		animationEngine : 'best-available',
+	}, onAnimationCompleted); <span>// callback here</span>
+
+	optionFilterLinks.removeClass('active');
+	$(this).addClass('active');
+
+	return false;
+});</pre>
+			<div id="open"></div>
+			<h3>Check open state</h3>
+			<pre>if ($.swipebox.isOpen){
+	// do stuff
+}</pre>
+
+			<div id="options"></div>
+			<h3>Options</h3>
+<pre>&lt;script type="text/javascript"&gt;
+jQuery(function($) {
+	$(".swipebox").swipebox({
+		useCSS : true, <span>// false will force the use of jQuery for animations</span>
+		hideBarsDelay : 3000, <span>// 0 to always show caption and action bar</span>
+		videoMaxWidth : 1140, <span>// videos max width</span>
+		beforeOpen: function(){}, <span>// called before opening</span>
+	      	afterClose: function(){} <span>// called after closing</span>
+	});
+});
+&lt;/script&gt;
+</pre>
+			</section>
+
+			<section id="action">
+				<div id="download"></div>
+				<p><a class="button" href="https://github.com/mosne/swipebox">View Source</a></p>
+			</section>
+			<hr>
+			<section>
+
+			<section id="showme_box">
+			<p><strong>plugin javascript</strong></p>
+			<textarea style="width: 993px; height: 400px;">			/*---------------------------------------------------------------------------------------------
+
+@author       Constantin Saguin - @brutaldesign
+@link            http://csag.co
+@github        http://github.com/brutaldesign/swipebox
+@version     1.2.1
+@license      MIT License
+
+----------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------
+
+@author       Constantin Saguin - @brutaldesign
+@link            http://csag.co
+@github        http://github.com/brutaldesign/swipebox
+@version     1.2.1
+@license      MIT License
+
+----------------------------------------------------------------------------------------------*/
+
+;(function(window,document,$,undefined){$.swipebox=function(elem,options){var defaults={useCSS:true,initialIndexOnArray:0,hideBarsDelay:3000,videoMaxWidth:1140,beforeOpen:null,afterClose:null},plugin=this,elements=[],elem=elem,selector=elem.selector,$selector=$(selector),isTouch=document.createTouch!==undefined||('ontouchstart'in window)||('onmsgesturechange'in window)||navigator.msMaxTouchPoints,supportSVG=!!(window.SVGSVGElement),winWidth=window.innerWidth?window.innerWidth:$(window).width(),winHeight=window.innerHeight?window.innerHeight:$(window).height(),html='&lt;div id="swipebox-overlay"&gt;\
+    &lt;div id="swipebox-slider"&gt;&lt;/div&gt;\
+    &lt;div id="swipebox-caption"&gt;&lt;/div&gt;\
+    &lt;div id="swipebox-action"&gt;\
+     &lt;a id="swipebox-close"&gt;&lt;/a&gt;\
+     &lt;a id="swipebox-prev"&gt;&lt;/a&gt;\
+     &lt;a id="swipebox-next"&gt;&lt;/a&gt;\
+    &lt;/div&gt;\
+  &lt;/div&gt;';plugin.settings={}
+plugin.init=function(){plugin.settings=$.extend({},defaults,options);if($.isArray(elem)){elements=elem;ui.target=$(window);ui.init(plugin.settings.initialIndexOnArray);}else{$selector.click(function(e){elements=[];var index,relType,relVal;if(!relVal){relType='rel';relVal=$(this).attr(relType);}
+if(relVal&amp;&amp;relVal!==''&amp;&amp;relVal!=='nofollow'){$elem=$selector.filter('['+relType+'="'+relVal+'"]');}else{$elem=$(selector);}
+$elem.each(function(){var title=null,href=null;if($(this).attr('title'))
+title=$(this).attr('title');if($(this).attr('href'))
+href=$(this).attr('href');elements.push({href:href,title:title});});index=$elem.index($(this));e.preventDefault();e.stopPropagation();ui.target=$(e.target);ui.init(index);});}}
+plugin.refresh=function(){if(!$.isArray(elem)){ui.destroy();$elem=$(selector);ui.actions();}}
+var ui={init:function(index){if(plugin.settings.beforeOpen)
+plugin.settings.beforeOpen();this.target.trigger('swipebox-start');$.swipebox.isOpen=true;this.build();this.openSlide(index);this.openMedia(index);this.preloadMedia(index+1);this.preloadMedia(index-1);},build:function(){var $this=this;$('body').append(html);if(supportSVG){var bg=$('#swipebox-action #swipebox-close').css('background-image');bg=bg.replace('png','svg');$('#swipebox-action #swipebox-prev,#swipebox-action #swipebox-next,#swipebox-action #swipebox-close').css({'background-image':bg});}
+$.each(elements,function(){$('#swipebox-slider').append('&lt;div class="slide"&gt;&lt;/div&gt;');});$this.setDim();$this.actions();$this.keyboard();$this.gesture();$this.animBars();$this.resize();},setDim:function(){var width,height,sliderCss={};if("onorientationchange"in window){window.addEventListener("orientationchange",function(){if(window.orientation==0){width=winWidth;height=winHeight;}else if(window.orientation==90||window.orientation==-90){width=winHeight;height=winWidth;}},false);}else{width=window.innerWidth?window.innerWidth:$(window).width();height=window.innerHeight?window.innerHeight:$(window).height();}
+sliderCss={width:width,height:height}
+$('#swipebox-overlay').css(sliderCss);},supportTransition:function(){var prefixes='transition WebkitTransition MozTransition OTransition msTransition KhtmlTransition'.split(' ');for(var i=0;i&lt;prefixes.length;i++){if(document.createElement('div').style[prefixes[i]]!==undefined){return prefixes[i];}}
+return false;},doCssTrans:function(){if(plugin.settings.useCSS&amp;&amp;this.supportTransition()){return true;}},gesture:function(){if(isTouch){var $this=this,distance=null,swipMinDistance=10,startCoords={},endCoords={};var bars=$('#swipebox-caption, #swipebox-action');bars.addClass('visible-bars');$this.setTimeout();$('body').bind('touchstart',function(e){$(this).addClass('touching');endCoords=e.originalEvent.targetTouches[0];startCoords.pageX=e.originalEvent.targetTouches[0].pageX;$('.touching').bind('touchmove',function(e){e.preventDefault();e.stopPropagation();endCoords=e.originalEvent.targetTouches[0];});return false;}).bind('touchend',function(e){e.preventDefault();e.stopPropagation();distance=endCoords.pageX-startCoords.pageX;if(distance&gt;=swipMinDistance){$this.getPrev();}else if(distance&lt;=-swipMinDistance){$this.getNext();}else{if(!bars.hasClass('visible-bars')){$this.showBars();$this.setTimeout();}else{$this.clearTimeout();$this.hideBars();}}
+$('.touching').off('touchmove').removeClass('touching');});}},setTimeout:function(){if(plugin.settings.hideBarsDelay&gt;0){var $this=this;$this.clearTimeout();$this.timeout=window.setTimeout(function(){$this.hideBars()},plugin.settings.hideBarsDelay);}},clearTimeout:function(){window.clearTimeout(this.timeout);this.timeout=null;},showBars:function(){var bars=$('#swipebox-caption, #swipebox-action');if(this.doCssTrans()){bars.addClass('visible-bars');}else{$('#swipebox-caption').animate({bottom:-50},500);$('#swipebox-action').animate({opacity:0},500);setTimeout(function(){bars.addClass('visible-bars');},1000);}},hideBars:function(){var bars=$('#swipebox-caption, #swipebox-action');if(this.doCssTrans()){bars.removeClass('visible-bars');}else{$('#swipebox-caption').animate({opacity:'1'},500);$('#swipebox-action').animate({opacity:'1'},500);setTimeout(function(){bars.removeClass('visible-bars');},1000);}},animBars:function(){var $this=this;var bars=$('#swipebox-caption, #swipebox-action');bars.addClass('visible-bars');$this.setTimeout();$('#swipebox-slider').click(function(e){if(!bars.hasClass('visible-bars')){$this.showBars();$this.setTimeout();}});$('#swipebox-action').hover(function(){$this.showBars();bars.addClass('force-visible-bars');$this.clearTimeout();},function(){bars.removeClass('force-visible-bars');$this.setTimeout();});},keyboard:function(){var $this=this;$(window).bind('keyup',function(e){e.preventDefault();e.stopPropagation();if(e.keyCode==37){$this.getPrev();}
+else if(e.keyCode==39){$this.getNext();}
+else if(e.keyCode==27){$this.closeSlide();}});},actions:function(){var $this=this;if(elements.length&lt;2){$('#swipebox-prev, #swipebox-next').hide();}else{$('#swipebox-prev').bind('click touchend',function(e){e.preventDefault();e.stopPropagation();$this.getPrev();$this.setTimeout();});$('#swipebox-next').bind('click touchend',function(e){e.preventDefault();e.stopPropagation();$this.getNext();$this.setTimeout();});}
+$('#swipebox-close').bind('click touchend',function(e){$this.closeSlide();});},setSlide:function(index,isFirst){isFirst=isFirst||false;var slider=$('#swipebox-slider');if(this.doCssTrans()){width=window.innerWidth?window.innerWidth:$(window).width();off="translate3d(-"+(index*width)+"px, 0, 0)";slider.css({"-webkit-transform":off,"-moz-transform":off,"-ms-transform":off,"-o-transform":off,"transform":off});}else{slider.animate({left:(-index*100)+'%'});}
+$('#swipebox-slider .slide').removeClass('current');$('#swipebox-slider .slide').eq(index).addClass('current');this.setTitle(index);if(isFirst){slider.fadeIn();}
+$('#swipebox-prev, #swipebox-next').removeClass('disabled');if(index==0){$('#swipebox-prev').addClass('disabled');}else if(index==elements.length-1){$('#swipebox-next').addClass('disabled');}},openSlide:function(index){$('html').addClass('swipebox');$(window).trigger('resize');this.setSlide(index,true);},preloadMedia:function(index){var $this=this,src=null;if(elements[index]!==undefined)
+src=elements[index].href;if(!$this.isVideo(src)){setTimeout(function(){$this.openMedia(index);},1000);}else{$this.openMedia(index);}},openMedia:function(index){var $this=this,src=null;if(elements[index]!==undefined)
+src=elements[index].href;if(index&lt;0||index&gt;=elements.length){return false;}
+if(!$this.isVideo(src)){$this.loadMedia(src,function(){$('#swipebox-slider .slide').eq(index).html(this);});}else{$('#swipebox-slider .slide').eq(index).html($this.getVideo(src));}},setTitle:function(index,isFirst){var title=null;$('#swipebox-caption').empty();if(elements[index]!==undefined)
+title=elements[index].title;if(title){cleantitle=' &lt;span class="title"&gt;'+title+'&lt;/span&gt; ';}else{cleantitle=' ';}
+tot=$('#swipebox-slider .slide').length;if(tot&gt;1){counter=' &lt;span class="counter"&gt;'+(index+1)+'/'+tot+'&lt;/span&gt; ';}else{counter=' ';}
+$('#swipebox-caption').append(counter+cleantitle);},isVideo:function(src){if(src){if(src.match(/youtube\.com\/watch\?v=([a-zA-Z0-9\-_]+)/)||src.match(/vimeo\.com\/([0-9]*)/)||src.match('://(www.)?dailymotion\.com')){return true;}}},getVideo:function(url){var success=false;if(url.match('://(www.)?youtube|youtu\.be')){if(url.match('embed')){youtube_id=url.split(/embed\//)[1].split('"')[0];}
+else{youtube_id=url.split(/v\/|v=|youtu\.be\//)[1].split(/[?&amp;]/)[0];}
+v_id=youtube_id;i_src="http://www.youtube.com/embed/"+v_id+"?controls=1&amp;color=white&amp;showinfo=0&amp;autoplay=1&amp;hd=1&amp;fs=1&amp;rel=0";success=true;}
+else if(url.match('://(player.)?vimeo\.com')){vimeo_Reg=/https?:\/\/(?:www\.)?vimeo.com\/(?:channels\/|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|)(\d+)(?:$|\/|\?)/;match=url.match(vimeo_Reg);v_id=match[3];i_src="http://player.vimeo.com/video/"+v_id+"?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff&amp;autoplay=1";success=true;}
+else if(url.match('://(www.)?dailymotion\.com')){m=url.match(/^.+dailymotion.com\/((video|hub)\/([^_]+))?[^#]*(#video=([^_&amp;]+))?/);v_id=m?m[5]||m[3]:null;i_src="http://www.dailymotion.com/embed/video/"+v_id+"?autoplay=true&amp;background=000000&amp;foreground=ffffff&amp;highlight=ffffff";success=true;}
+if(success){iframe='&lt;iframe width="560" height="315"  src="'+i_src+'" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;';return'&lt;div class="swipebox-video-container" style="max-width:'+plugin.settings.videomaxWidth+'px"&gt;&lt;div class="swipebox-video"&gt;'+iframe+'&lt;/div&gt;&lt;/div&gt;';}},loadMedia:function(src,callback){if(!this.isVideo(src)){var img=$('&lt;img&gt;').on('load',function(){callback.call(img);});img.attr('src',src);}},getNext:function(){var $this=this;index=$('#swipebox-slider .slide').index($('#swipebox-slider .slide.current'));if(index+1&lt;elements.length){index++;$this.setSlide(index);$this.preloadMedia(index+1);}
+else{$('#swipebox-slider').addClass('rightSpring');setTimeout(function(){$('#swipebox-slider').removeClass('rightSpring');},500);}},getPrev:function(){index=$('#swipebox-slider .slide').index($('#swipebox-slider .slide.current'));if(index&gt;0){index--;this.setSlide(index);this.preloadMedia(index-1);}
+else{$('#swipebox-slider').addClass('leftSpring');setTimeout(function(){$('#swipebox-slider').removeClass('leftSpring');},500);}},resize:function(){var $this=this;$(window).resize(function(){curr=$('#swipebox-slider .slide').index($('#swipebox-slider .slide.current'));$this.setDim();$this.setSlide(curr);}).resize();},closeSlide:function(){$('html').removeClass('swipebox');$(window).trigger('resize');this.destroy();},destroy:function(){$(window).unbind('keyup');$('body').unbind('touchstart');$('body').unbind('touchmove');$('body').unbind('touchend');$('#swipebox-slider').unbind();$('#swipebox-overlay').remove();if(!$.isArray(elem))
+elem.removeData('_swipebox');if(this.target)
+this.target.trigger('swipebox-destroy');$.swipebox.isOpen=false;if(plugin.settings.afterClose)
+plugin.settings.afterClose();}};plugin.init();};$.fn.swipebox=function(options){if(!$.data(this,"_swipebox")){var swipebox=new $.swipebox(this,options);this.data('_swipebox',swipebox);}
+return this.data('_swipebox');}}(window,document,jQuery));
+			</textarea>
+			<p><strong>plugin css</strong></p>
+			<textarea style="width: 1059px; height: 309px;">			html.swipebox{overflow:hidden !important}#swipebox-overlay img{border:none !important}#swipebox-slider{-webkit-transition:all 0.4s ease;-moz-transition:all 0.4s ease;-o-transition:all 0.4s ease;-khtml-transition:all 0.4s ease;transition:all 0.4s ease}#swipebox-overlay{-webkit-transition:opacity 1s ease;-moz-transition:opacity 1s ease;-o-transition:opacity 1s ease;-khtml-transition:opacity 1s ease;transition:opacity 1s ease}#swipebox-action,#swipebox-caption{-webkit-transition:0.5s;-moz-transition:0.5s;-o-transition:0.5s;-khtml-transition:0.5s;transition:0.5s}#swipebox-overlay{width:100%;height:100%;position:fixed;top:0;left:0;z-index:99999 !important;overflow:hidden;-webkit-user-select:none;-moz-user-select:none;user-select:none}#swipebox-slider{height:100%;left:0;top:0;width:100%;white-space:nowrap;position:absolute;display:none}#swipebox-slider .slide{background:url("images/loader.gif") no-repeat center center;height:100%;width:100%;line-height:1px;text-align:center;display:inline-block}#swipebox-slider .slide:before{content:"";display:inline-block;height:50%;width:1px;margin-right:-1px}#swipebox-slider .slide img,#swipebox-slider .slide .swipebox-video-container{display:inline-block;max-height:100%;max-width:100%;margin:0;padding:0;width:auto;height:auto;vertical-align:middle}#swipebox-slider .slide .swipebox-video-container{background:none;max-width:1140px;max-height:100%;width:100%;padding:5%;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}#swipebox-slider .slide .swipebox-video-container .swipebox-video{width:100%;height:0;padding-bottom:56.25%;overflow:hidden;position:relative}#swipebox-slider .slide .swipebox-video-container .swipebox-video iframe{width:100% !important;height:100% !important;position:absolute;top:0;left:0}#swipebox-action,#swipebox-caption{position:absolute;bottom:0;z-index:999;width:100%}#swipebox-action{top:0;opacity:0;height:0}#swipebox-action.visible-bars{top:0;opacity:1}#swipebox-action.force-visible-bars{opacity:1 !important}#swipebox-caption{opacity:0}#swipebox-caption.visible-bars{opacity:1}#swipebox-caption.force-visible-bars{opacity:1 !important}#swipebox-action #swipebox-prev,#swipebox-action #swipebox-next,#swipebox-action #swipebox-close{background:transparent url("images/icons.png") no-repeat;border:none !important;text-decoration:none !important;cursor:pointer;position:fixed;width:50px;height:50px;top:0}#swipebox-action #swipebox-close{background-position:15px 12px;right:0}#swipebox-action #swipebox-prev{background-position:-32px 13px;left:0;top:50%;margin-top:-25px}#swipebox-action #swipebox-next{background-position:-78px 13px;right:0;top:50%;margin-top:-25px}#swipebox-action #swipebox-prev.disabled,#swipebox-action #swipebox-next.disabled{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=30);opacity:0.3}#swipebox-slider.rightSpring{-moz-animation:rightSpring 0.3s;-webkit-animation:rightSpring 0.3s}#swipebox-slider.leftSpring{-moz-animation:leftSpring 0.3s;-webkit-animation:leftSpring 0.3s}@-moz-keyframes rightSpring {0%{margin-left:0px;}50%{margin-left:-30px;}100%{margin-left:0px;}}@-moz-keyframes leftSpring {0%{margin-left:0px;}50%{margin-left:30px;}100%{margin-left:0px;}}@-webkit-keyframes "rightSpring"{0%{margin-left:0px;}50%{margin-left:-30px;}100%{margin-left:0px;}}@-webkit-keyframes "leftSpring"{0%{margin-left:0px;}50%{margin-left:30px;}100%{margin-left:0px;}}
+
+
+/* Skin
+--------------------------*/
+#swipebox-overlay {
+  background: #1A1818;
+}
+
+#swipebox-caption {
+    height: 25%;
+}
+
+#swipebox-caption .title,
+#swipebox-caption .counter{
+    position: absolute;
+    bottom: 0;
+}
+
+#swipebox-caption .title{
+  font-size: 13px;
+  line-height: 13px;
+  background: #BE222A;
+  float: left;
+  right: 0;
+  max-width: 200px;
+  color: white;
+  margin: 15px;
+  padding: 15px;
+}
+
+
+#swipebox-caption .counter{
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: white;
+    float: left;
+    text-shadow: 1px 1px #1a1818;
+    margin: 15px;
+    left: 0;
+}
+
+			</textarea>
+
+			<p><strong>plugin images</strong></p>
+			<a href="https://www.mosne.it/playground/swipebox/source/images.zip">images.zip</a>
+
+			</section>
+
+			<section id="credits">
+				<p><strong>Credits</strong></p>
+				<p>Forked from <a href="https://github.com/brutaldesign/swipebox" target="_blank">brutaldesign</a></p>
+				<p>Photos by <a href="http://www.flickr.com/photos/astragony/" target="_blank">Daniele Zedda</a></p>
+			</section>
+		</section></div>
+		<footer>
+			<div class="wrap">
+				<a href="http://csag.co/" target="_blank">Constantin Saguin</a> | <a href="http://twitter.com/brutaldesign" target="_blank">@brutaldesign</a>
+			</div>
+		</footer>
+	</div>
+	<script src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/ios-orientationchange-fix.js.Без названия"></script>
+	<script src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/jquery-2.0.3.min.js.Без названия"></script>
+	<script src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/jquery.isotope.min.js.Без названия"></script>
+	<script src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/jquery.swipebox.js.Без названия"></script>
+	<script type="text/javascript">
+		jQuery(function($) {
+
+			/* Basic Gallery */
+			$(".swipebox").swipebox();
+
+			/* Video */
+			$(".swipebox-video").swipebox();
+
+
+			/* Dynamic Gallery */
+			$("#gallery").click(function(e){
+				e.preventDefault();
+				$.swipebox([
+					{ href : 'http://swipebox.brutaldesign.com/assets/full/reine.jpg', title : 'My Caption' },
+					{ href : 'http://swipebox.brutaldesign.com/assets/full/nuke.jpg', title : 'My Second Caption' }
+				]);
+			});
+
+
+			/* Isotope */
+			var swipeboxInstance = $(".swipebox-isotope:not(.isotope-hidden .swipebox-isotope)").swipebox();
+
+			var $container = $('#grid');
+			var optionFilter = $('#filter'),
+			optionFilterLinks = optionFilter.find('a');
+			optionFilterLinks.attr('href', '#');
+
+			onAnimationCompleted = function(){
+				swipeboxInstance.refresh();
+			};
+
+			optionFilterLinks.click( function(){
+				var selector = $(this).attr('data-filter');
+				$container.isotope({
+					filter : '.' + selector,
+					itemSelector : '.item',
+					layoutMode : 'fitRows',
+					animationEngine : 'best-available',
+				}, onAnimationCompleted);
+
+				// Highlight the correct filter
+				optionFilterLinks.removeClass('active');
+				$(this).addClass('active');
+
+
+				return false;
+			});
+		});
+	</script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/widget_iframe.a58e82e150afc25eb5372dd55a98b778.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Mosne&#39;s Swipebox _ A touchable jQuery lightbox_files/saved_resource.html"></iframe></body></html>

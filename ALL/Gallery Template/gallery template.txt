@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="fancybox.css" />
+
+<script src="fancybox.js"></script>
+
+<style type="text/css">
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.gallery-item {
+  width: 260px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid #caeb8e;
+  margin-bottom: 10px;
+}
+.gallery-item img {
+  width: 260px;
+}
+</style>
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="/images/2019/11/pohud1.jpg" data-fancybox target="_blank"> <img alt="" border="3" src="/images/2019/11/pohud1.jpg"> </a>
+  </div>
+  <div class="gallery-item">
+    <a href="/images/2019/fitnes-s-trenerom15.jpg" data-fancybox target="_blank"> <img alt="" border="3" src="/images/2019/fitnes-s-trenerom15.jpg"> </a>
+  </div>
+</div>

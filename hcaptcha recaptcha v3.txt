@@ -1,0 +1,84 @@
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+
+
+<div id="hcaptcha-sasa" class="h-captcha" data-sitekey="4cb48dee-ed98-4f12-bab2-72cc8d0ea76c" data-size="invisible"></div>
+
+
+
+$(document).on('submit', '.ajax', function() {
+	var $form=$(this);
+	grecaptcha.ready(function() {
+		grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
+			$.ajax({
+				url: "/ajax/recaptcha",
+				type: 'POST',
+				data: {
+					token: token
+				},
+				success: function(result){
+					console.log(result);
+					$.ajax({
+						url: "/mains/submit_form",
+						type:   'POST',
+						data: $form.serialize(),
+						success: function(result){
+							$.fancybox.open({
+								href:"#success",
+							});
+						}
+					});
+				}
+			});
+		});
+	});
+	return false;
+});
+
+
+
+<?php
+function hcaptcha_check($token) {
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, 'https://api.hcaptcha.com/siteverify');
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+		'Content-Type: application/x-www-form-urlencoded; charset=utf-8',
+	));
+	$body = array(
+		'secret' => 'ES_6fbc829dfbce45f2b368376176bfca8d',
+		'response' => $token,
+	);
+	$body = http_build_query($body);
+	// set body
+	curl_setopt($ch, CURLOPT_POST, 1);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+	// send the request and save response to $response
+	$response = curl_exec($ch);
+	// stop if fails
+	if (!$response) {
+		die('Error: "' . curl_error($ch) . '" - Code: ' . curl_errno($ch));
+	} else {
+		$response = json_decode($response);
+	}
+	curl_close($ch);
+
+	return $response;
+}
+
+
+
+<?php
+if (!$_POST['h-captcha-response']) {
+    exit('Каптча не пройдена');
+}
+
+// import hcaptcha_check() function
+require( $_SERVER[ 'DOCUMENT_ROOT' ] .'/include/hcaptcha-check.php' );
+
+$response = hcaptcha_check($_POST['h-captcha-response']);
+
+if($response->success === true) {
+	// остальное
+}

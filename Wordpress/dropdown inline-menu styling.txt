@@ -1,0 +1,32 @@
+  ul.menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: vars.$color-primary
+    & > li
+      position: relative
+      flex-grow: 1
+    & > li > a
+      display: block
+      width: 100%
+      padding: 0.75rem 0
+      text-align: center
+      color: #fff
+      &:hover
+        background-color: #fff
+        color: vars.$color-primary
+        & + ul.sub-menu
+          display: block
+
+  ul.sub-menu
+    display: none
+    position: absolute
+    left: 0rem
+    width: 100%
+    padding: 1rem 1rem 2rem
+    z-index: 1
+    &:hover
+      display: block
+    a
+      display: block
+      padding: 1rem 1rem 0

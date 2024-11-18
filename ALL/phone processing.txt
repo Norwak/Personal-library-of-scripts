@@ -1,0 +1,16 @@
+<?php
+// Make raw phone number from beautiful
+function get_raw_phone($phone) {
+	preg_match_all('!\d+!', $phone, $phoneRaw);
+	$phoneRaw = implode('', $phoneRaw[0]);
+	if (($phoneRaw[0] != '+') AND ($phoneRaw[0] == '7') AND (strlen($phoneRaw) > '9')) {
+		$phoneRaw = '+' . $phoneRaw;
+	}
+	if (($phoneRaw[0] == '8') AND (strlen($phoneRaw) == '11')) {
+		$phoneRaw = ltrim($phoneRaw, "8");
+		$phoneRaw = '+7' . $phoneRaw;
+	}
+	return $phoneRaw;
+}
+?>
+<a href="tel:<? echo get_raw_phone($phone); ?>"><? echo $phone; ?></a>

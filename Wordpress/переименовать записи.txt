@@ -1,0 +1,27 @@
+КОД ЧТОБЫ ПЕРЕИМЕНОВАТЬ ЗАПИСИ:
+  //rename 'Записи' to 'Семинары'
+  add_action( 'admin_menu', 'change_post_menu_label' );
+  function change_post_menu_label() {
+    global $menu, $submenu;
+    $menu[5][0] = 'Семинары';
+    $submenu['edit.php'][5][0] = 'Семинары';
+    $submenu['edit.php'][10][0] = 'Добавить семинар';
+    $submenu['edit.php'][16][0] = 'Метки семинаров';
+    echo '';
+  }
+
+  add_action( 'init', 'change_post_object_label' );
+  function change_post_object_label() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = 'Семинары';
+    $labels->singular_name = 'Семинары';
+    $labels->add_new = 'Добавить семинар';
+    $labels->add_new_item = 'Добавить семинар';
+    $labels->edit_item = 'Редактировать семинар';
+    $labels->new_item = 'Добавить семинар';
+    $labels->view_item = 'Посмотреть семинар';
+    $labels->search_items = 'Найти семинар';
+    $labels->not_found = 'Не найдено';
+    $labels->not_found_in_trash = 'Корзина пуста';
+  }

@@ -1,0 +1,29 @@
+/* // */
+// Styles for all buttons
+/* // */
+
+@use '../2-abstracts/_variables' as *
+
+.btn
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 40px
+  padding: 0 20px
+  font-size: 1.4rem
+  font-weight: bold
+  border: none
+  text-transform: uppercase
+  white-space: nowrap
+  cursor: pointer
+
+  &--primary
+    background-color: $color-primary
+    color: #fff
+    &:hover
+      background-color: $color-primary-hover
+      color: #fff
+      border: none
+
+  &--100p
+    width: 100%

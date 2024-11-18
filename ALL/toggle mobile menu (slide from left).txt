@@ -1,0 +1,27 @@
+@media (max-width: 768px)
+  .mobile-menu
+    position: absolute
+    top: 0
+    left: -200%
+    width: 50%
+    transition: left 0.5s
+
+    &.active
+      left: 0
+
+@media (max-width: 450px)
+  .mobile-menu
+    width: 100%
+
+// Toggle mobile menu
+let menuTogglers = document.querySelectorAll('.menu-toggler');
+let menu = document.getElementById('main-nav');
+for (const menuToggler of menuTogglers) {
+  menuToggler.onclick = function(e) {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      // window width is at less than 768px
+      e.preventDefault();
+      menu.classList.toggle('active');
+    }
+  }
+}

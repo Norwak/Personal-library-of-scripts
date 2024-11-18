@@ -1,0 +1,41 @@
+/* // */
+// General styles for the whole website
+/* // */
+
+@use '../2-abstracts/_variables' as *
+
+
+// Basic styles for user's text content
+.user-content, .spu-box, .elementor-widget-text-editor
+  p
+    margin-top: 15px
+    margin-bottom: 0
+    &:first-child
+      margin-top: 0
+  h1, h2, h3, h4
+    margin-top: 30px
+    margin-bottom: 0
+    &:first-child
+      margin-top: 0
+  style
+    & + p, h1, h2, h3, h4
+      margin-top: 0
+  ul:not(.elementor-editor-element-settings), ol
+    margin-top: 15px
+    margin-bottom: 0
+    padding-left: 17px
+  li > ul, li > ol
+    margin-top: 0
+  a
+    color: var(--e-global-color-secondary)
+    text-decoration: none
+  table
+    margin-top: 15px
+    td
+      padding: 5px
+
+
+  
+// Remove underline under X button
+.dialog-lightbox-close-button
+  text-decoration: none

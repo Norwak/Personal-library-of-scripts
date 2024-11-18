@@ -1,0 +1,40 @@
+/* // */
+// Styles for the component containing contact information
+/* // */
+
+@use '../2-abstracts/_variables' as *
+
+.contact
+  .highlight
+    color: $color-primary
+
+  &__item
+    text-align: center
+    a
+      color: $color-primary
+
+  &__icon
+    font-size: 2rem
+    color: $color-primary
+
+  &__phone
+    span
+      font-size: 2.4rem
+
+
+
+@media (max-width: 1230px)
+  .contact__item:nth-child(odd)
+    text-align: right
+  .contact__item:nth-child(even)
+    text-align: left
+
+
+
+@media (max-width: 767px)
+  .contact__item
+    text-align: center
+    &:nth-child(odd)
+      text-align: center
+    &:nth-child(even)
+      text-align: center

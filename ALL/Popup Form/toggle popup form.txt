@@ -1,0 +1,126 @@
+.modal_trigger_button
+  cursor: pointer
+#close_modal_button
+  cursor: pointer
+
+.modal-container
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba(0, 0, 0, 0.75)
+  visibility: hidden
+  opacity: 0
+  transition: visibility 0.3s, opacity 0.3s
+  z-index: 10
+
+  .modal-content
+    position: relative
+    padding: 1.5rem
+    border: 2px solid $main-color
+    background-color: $dark-color
+
+    span
+      position: absolute
+      top: 0.5rem
+      right: 0.5rem
+      width: 2rem
+      height: 2rem
+      font-size: 2rem
+      color: $main-color
+
+    h2
+      margin: 1rem 0
+      font-size: 2rem
+      text-align: center
+      color: $main-color
+
+    form
+      width: 100%
+      margin: 0
+      color: #333
+
+      input[type="submit"]
+        display: block
+        width: 150px
+        margin: 0 auto
+        padding: 0.75rem
+        border: none
+        font-size: 12px
+        text-align: center
+        text-transform: uppercase
+        letter-spacing: 1px
+        background-color: $main-color
+        color: $dark-color
+        transition: background-color 0.3s
+        cursor: pointer
+        outline: none
+
+        &:hover
+          background-color: $accent-color
+
+      .form-group
+        margin-bottom: 1rem
+
+        label
+          display: block
+          margin-bottom: 0.25rem
+          color: $main-color
+
+        input
+          display: block
+          width: 100%
+          padding: 0.25rem 0.5rem
+          border: 1px solid $main-color
+          font-size: 1.3rem
+          background-color: $dark-color
+          color: $main-color
+          outline: none
+
+          &:focus
+            border-color: $accent-color
+
+
+
+<div id="modal_form" class="modal-container">
+	<div class="modal-content">
+		<span id="close_modal_button" class="dashicons dashicons-no"></span>
+		<h2>Закажите товар - мы Вам перезвоним!</h2>
+		<form action="/send.php" method="POST">
+			<input type="hidden" name="product" value="Абсент Xenta 0,7 70% (Italy)">
+			<div class="form-group">
+				<label for="name">Имя:</label>
+				<input type="text" name="name" id="name" placeholder="Введите имя...">
+			</div>
+			<div class="form-group">
+				<label for="phone">Телефон:</label>
+				<input type="text" name="phone" id="phone" placeholder="Введите телефон..." required="">
+			</div>
+			<input type="submit" value="Заказать">
+		</form>
+	</div>
+</div>
+
+
+
+// Popup form
+let triggerButtons = document.querySelectorAll('.modal_trigger_button');
+let closeButton = document.getElementById('close_modal_button');
+var modalForm = document.getElementById('modal_form');
+triggerButtons.forEach(function(triggerButton) {
+  triggerButton.onclick = function(e){
+    e.preventDefault();
+    let location_field = document.querySelector('form input[name="product"]');
+    location_field.value = triggerButton.dataset.location;
+    modalForm.style.visibility = 'visible';
+    modalForm.style.opacity = '1';
+  }
+});
+closeButton.onclick = function(e){
+  modalForm.style.visibility = 'hidden';
+  modalForm.style.opacity = '0';
+}

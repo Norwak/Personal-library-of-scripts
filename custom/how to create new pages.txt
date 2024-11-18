@@ -1,0 +1,4 @@
+/*
+Template Name: Name that shows in admin panel
+Template Post Type: post, page
+*/

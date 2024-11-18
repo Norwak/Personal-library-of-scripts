@@ -1,0 +1,36 @@
+h1.separator, h2.separator, h3.separator
+  overflow-x: hidden
+  padding-bottom: 30px
+  font-family: 'Rubik', sans-serif
+  font-size: 2rem
+  font-weight: normal
+  text-align: center
+  letter-spacing: 2px
+  color: $main-color-alt
+
+  span
+    position: relative
+    padding: 0 2rem
+    
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      top: 50%
+      right: 100%
+      width: 1000px
+      height: 1px
+      background-color: $main-color
+
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      top: 50%
+      left: 100%
+      width: 1000px
+      height: 2px
+      background-color: $main-color
+
+
+<h1 class="separator"><span>Доставка</span></h2>

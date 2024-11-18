@@ -1,0 +1,13 @@
+// Show/hide "Back to top" button at 50% scroll
+window.addEventListener("scroll", (event) => {
+  let scroll = window.scrollY;
+  let scrollTriggerPoint = document.documentElement.scrollHeight / 3;
+  let backToTopBtn = document.getElementById('back-to-top');
+  if (scroll < scrollTriggerPoint) {
+    backToTopBtn.style.visibility = 'hidden';
+    backToTopBtn.style.opacity = '0';
+  } else {
+    backToTopBtn.style.visibility = 'visible';
+    backToTopBtn.style.opacity = '1';
+  }
+});

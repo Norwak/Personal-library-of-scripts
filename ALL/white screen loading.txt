@@ -1,0 +1,31 @@
+// White Screen Loading
+#white-screen
+  display: block
+  position: fixed
+  top: -50vh
+  left: -50vw
+  width: 200vw
+  height: 200vh
+  background-color: #fff
+  opacity: 1
+  visibility: visible
+  transition: opacity 0.3s, visibility 0.3s
+  z-index: 9999999
+
+<div id="white-screen"></div>
+
+window.addEventListener("load", function() {
+  // Show Page after page load
+  let whiteScreen = document.getElementById('white-screen');
+  whiteScreen.style.opacity = "0";
+  whiteScreen.style.visibility = "hidden";
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Show Page after timer
+  setTimeout(function() {
+    let whiteScreen = document.getElementById('white-screen');
+    whiteScreen.style.opacity = "0";
+    whiteScreen.style.visibility = "hidden";
+  }, 7500);
+})

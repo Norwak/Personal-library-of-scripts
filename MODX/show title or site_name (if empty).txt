@@ -1,0 +1,8 @@
+<?php
+$longtitle = $modx->resource->get('longtitle');
+$site_name = $modx->getOption('site_name');
+if ($longtitle == "") {
+    echo $site_name;
+} else {
+    echo $longtitle;
+}

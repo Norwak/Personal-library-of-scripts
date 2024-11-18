@@ -1,0 +1,1 @@
+sass --watch --no-source-map --style=compressed styles.sass:../css/styles.css editor-styles.sass:../css/editor-styles.css

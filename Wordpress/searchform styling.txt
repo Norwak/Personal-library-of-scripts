@@ -1,0 +1,27 @@
+  // Search
+  .searchform
+    display: flex
+    width: 100%
+    padding: 1rem
+    background-color: vars.$color-light
+
+    input[type="text"]
+      flex-grow: 1
+      padding-left: 1rem
+      padding-right: 1rem
+      border: 1px solid vars.$color-light-hover
+      border-radius: 5px 0 0 5px
+      color: vars.$color-gray
+      &:focus
+        border-color: vars.$color-gray
+        outline: none
+
+    button[type="submit"]
+      padding: 0.5rem 1rem
+      border: 1px solid vars.$color-light-hover
+      border-left: none
+      border-radius: 0 5px 5px 0
+      background-color: #fff
+      transition: background-color 0.3s
+      &:hover
+        background-color: vars.$color-light-hover
